@@ -1,0 +1,91 @@
+/* Enhanced hiding for YouTube Shorts and filtered content */
+div[is-shorts],
+ytd-rich-shelf-renderer[is-shorts],
+ytd-reel-shelf-renderer,
+ytd-video-renderer[is-shorts],
+ytd-compact-video-renderer[is-shorts],
+ytd-grid-video-renderer[is-shorts],
+ytd-shorts,
+ytd-reel-video-renderer,
+ytd-reel-item-renderer,
+.ytm-shorts-shelf,
+.shorts-video-cell,
+[data-filtered] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide Shorts tab in navigation */
+a[title="Shorts"],
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+yt-tab-shape:has([aria-label*="Shorts"]) {
+  display: none !important;
+}
+
+/* Hide any video containers that contain shorts URLs */
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytd-compact-video-renderer:has(a[href*="/shorts/"]),
+ytd-rich-item-renderer:has(a[href*="/shorts/"]),
+ytd-grid-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Clean up empty spaces left by hidden content */
+ytd-rich-grid-renderer,
+ytd-item-section-renderer,
+ytd-section-list-renderer {
+  gap: 16px !important;
+}
+
+/* Smooth transitions for content hiding */
+ytd-rich-item-renderer,
+ytd-compact-video-renderer,
+ytd-video-renderer,
+ytd-grid-video-renderer {
+  transition: opacity 0.3s ease, height 0.3s ease !important;
+}
+
+/* Hide Shorts creation button */
+ytd-topbar-menu-button-renderer:has([aria-label*="Create"]) .ytd-topbar-menu-button-renderer:nth-child(1) {
+  display: none !important;
+}
+
+/* Additional hiding for search results */
+#contents ytd-video-renderer:has(a[href*="/shorts/"]),
+#contents ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Hide shorts from recommended/related videos */
+#related ytd-compact-video-renderer:has(a[href*="/shorts/"]),
+#secondary ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Ensure filtered content stays hidden */
+[data-filtered="shorts-url"],
+[data-filtered="shorts-selector"], 
+[data-filtered="shorts-duration"],
+[data-filtered="keyword"],
+[data-filtered="keyword-desc"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}

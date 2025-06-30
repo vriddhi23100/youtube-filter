@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Content Filter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon">🚫</div>
+      <h1>YouTube Filter</h1>
+    </div>
+    
+    <div class="controls">
+      <div class="setting-item">
+        <div class="setting-info">
+          <h3>Block Shorts</h3>
+          <p>Hide YouTube Shorts from all pages</p>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="blockShorts" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      
+      <div class="setting-item">
+        <div class="setting-info">
+          <h3>Filter Keywords</h3>
+          <p>Hide videos with specific keywords</p>
+        </div>
+        <label class="toggle">
+          <input type="checkbox" id="filterKeywords">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="keywords-section" id="keywordsSection" style="display: none;">
+      <h4>Blocked Keywords</h4>
+      <div class="keyword-input">
+        <input type="text" id="keywordInput" placeholder="Enter keyword (e.g., vlog, meme, comedy)">
+        <button id="addKeyword">Add</button>
+      </div>
+      <div class="keywords-list" id="keywordsList"></div>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-number" id="blockedCount">0</span>
+        <span class="stat-label">Items Blocked</span>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <button id="resetStats" class="reset-btn">Reset Stats</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
