@@ -1,4 +1,4 @@
-# Youtube Shorts Blocker & Content Filter
+# Youtube Shorts Blocker & Content Filter - Browser Extension
 
 I wanted to learn on YouTube, but I kept getting distracted by Shorts and TMKOC videos. No matter how hard I tried, the algorithm would keep throwing them at me. So I built this extension to block Shorts and filter out videos that waste my time.
 
@@ -14,7 +14,7 @@ I wanted to learn on YouTube, but I kept getting distracted by Shorts and TMKOC 
 - Beginners who want to see how a basic extension works
 
 
-There are probably a hundred extensions like this. But this one is mine. I made it for myself, from scratch, as a beginner. It's basic, but it works. And I use it.
+There are probably a hundred extensions like this. I made it as a beginner. It's basic, but it works. And I use it.
 
 ## How to use
 1. Download or clone this repo
